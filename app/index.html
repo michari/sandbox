@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en" ng-app="sandboxApp">
+<head>
+	<title>Manto's Sandbox</title>
+	<link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css">
+    <script src="lib/angular/angular.js"></script>
+    <script src="lib/angular-route/angular-route.js"></script>
+
+	<script src="js/app.js"></script>
+
+</head>
+<body>
+	 
+	<div class = "container">
+		<div class = "row-fluid">
+		    <h1 ng-cloak>Hello {{'Angular'}} ! </h1>	
+
+		    <div ng-view></div>
+
+
+			<p class="lead"> This is test
+			
+			<ol>
+				<dt>Name</dt> <dd>Some Value</dd>
+				<dt>Email</dt> <dd><input class="span3" type="email" required></dd>
+			</ol>
+			<button class="btn btn-primary" type="button">Post</button>
+			</p>
+		</div>
+	</div>
+
+</body>
+</html>
