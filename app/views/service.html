@@ -1,12 +1,13 @@
 <h3>New Service</h3>
 
 <p>
-<b>Inside ServiceCtrl</b>
+<b>Inside ServiceCtrl {{vm.randomVal}} </b>
 <br>
 Shared Endpoint: <i>{{vm.endpoint}} </i> with my constnat value: <i> {{vm.val}} </i>
 <br>
 Shared Value: <input ng-model="vm.shared.foo"/>
 
+<button ng-click="vm.rand()" >Randomize</button>
 
 </p>
 

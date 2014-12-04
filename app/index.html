@@ -12,13 +12,20 @@
 <body>
 	 
 	<div class = "container">
+		<h1 ng-cloak>Hello {{'Angular'}} !! </h1>	
 		<div class = "row-fluid">
-		    <h1 ng-cloak>Hello {{'Angular'}} ! </h1>	
-
 		    <div ng-view></div>
-
+		    <br>
+		</div>
+		<div class="form-actions" ng-controller="page1Ctrl">
+			<a class="btn btn-primary" href="#/">Home</a>
+			<a class="btn btn-primary" href="#/watches">Goto Watches</a>
+			<a class="btn btn-primary" href="#/services">Goto Service</a>
+			<a class="btn btn-primary" href="#/promises">Goto Promise</a>
+			<a class="btn btn-primary" href="#/directives">Goto Directive</a>
+			<br>
+			<span>Verison {{version}} </span> 
 		</div>
 	</div>
-
 </body>
 </html>
