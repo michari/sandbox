@@ -1,0 +1,22 @@
+<h3>New Service</h3>
+
+<p>
+<b>Inside ServiceCtrl</b>
+<br>
+Shared Endpoint: <i>{{vm.endpoint}} </i> with my constnat value: <i> {{vm.val}} </i>
+<br>
+Shared Value: <input ng-model="vm.shared.foo"/>
+
+
+</p>
+
+
+<div ng-controller="Ctrl1">
+	<p>
+	<b>Inside Ctrl1</b>
+	<br>
+	Shared Endpoint: {{endpoint}}
+	<br>
+	Shared Value: <input ng-model="shared.foo"/>
+	</p>
+</div>

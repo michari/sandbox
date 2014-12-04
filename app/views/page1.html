@@ -1,13 +1,16 @@
-<h4>This is first page by, {{name}}</h4> 
+<h4>First View</h4> 
 
-<div ng-controller="Ctrl1">
-	{{name}} <input ng-model="name">
-</div>
+<div ng-controller="Ctrl1" class="bg-success">
+	Ctrl 1's name <input ng-model="person.name"> {{person.name}}
 
-<div ng-controller="Ctrl1">
-	<input ng-model="name">
-</div>
+	<div ng-controller="Ctrl1" class="bg-info">
+		Ctrl 2's name  <input ng-model="person.name">  {{person.name}}
+	</div>
 
-<div ng-controller="Ctrl2">
-	Two
 </div>
+<br>
+
+<div class="form-actions">
+	<a class="btn btn-primary" href="#/watches">Goto Watches</a>
+	<a class="btn btn-primary" href="#/services">Goto Service</a>
+</a>

@@ -1,0 +1,14 @@
+<h3>New Watch</h3>
+<h4>This is my Watch, <input ng-model="person.name"></h4> 
+<h4>This is my Watch, <input ng-model="dog.name"></h4> 
+
+<ul>
+<sapm ng-repeat=" a in [1,3,4,5,6,7,8,9]">
+<li>
+{{a}} 
+<b>Person:</b> {{person.name}} 
+<b>Dog:</b> {{dog.name}} 
+<i>and Person should not change:</i> {{ ::person.name}} 
+</li>
+</sapm>
+</ul>
