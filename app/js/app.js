@@ -146,17 +146,36 @@
 		.controller('DirectiveCtrl', function($scope) {
 				$scope.address = {};
 				$scope.address.street = '9015 S Yosemite St';
+				$scope.isEditing = true;
 		})
 
 
 		.directive('usAddress', function () {
 
+			function dialNumber(phone) {
+				console.log('Dialing..... ' + phone);
+			};
+
 			return {
 				templateUrl: 'views/us-address.html',
 				transclude: true,
 				scope: {
-					abcAddress: '=' //Two way binding
-				}
+					abcAddress: '=', //Two way binding
+					readonly: '='
+				},
+
+				controller: function($scope) {
+					// Inline Functions	
+					//$scope.dialNumber = function() {
+					//	console.log('Dialing..... ' + $scope.abcAddress.phone);
+					//}
+					$scope.dialNumber = dialNumber;
+					$scope.checkNumber = function () {
+						console.log('Checking..... ' + $scope.abcAddress.phone);
+						return !isNaN($scope.abcAddress.phone);
+					};
+				} 
+
 
 			};
 		})

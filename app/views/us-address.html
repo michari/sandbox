@@ -1,35 +1,46 @@
 <form class="form-horizontal">
-  <legend ng-transclude>US Address</legend>
-  <div class="control-group">
-    <label class="control-label" for="inputEmail">Street</label>
-    <div class="controls">
-      <input type="text" placeholder="Street" ng-model="abcAddress.street">
+  <legend ng-transclude></legend>
+  <div ng-show="!readonly">  
+      <div class="control-group">
+        <label class="control-label" for="inputEmail">Street</label>
+        <div class="controls">
+          <input type="text" placeholder="Street" ng-model="abcAddress.street">
+        </div>
+      </div>
+      <div class="control-group">
+        <label class="control-label" for="inputPassword">City</label>
+        <div class="controls">
+          <input type="text" ng-model="abcAddress.city" placeholder="City">
+        </div>
+      </div>
+      <div class="control-group">
+        <label class="control-label" for="inputPassword">State</label>
+        <div class="controls">
+          <input type="text" ng-model="abcAddress.state" placeholder="State">
+        </div>
+      </div>
+      <div class="control-group">
+        <label class="control-label" for="inputPassword">Zip</label>
+        <div class="controls">
+          <input type="text" ng-model="abcAddress.zip" placeholder="Zip">
+        </div>
+      </div>
+      <div class="control-group">
+        <label class="control-label" for="inputPassword">Phone Number</label>
+        <div class="controls">
+          <input type="text" ng-model="abcAddress.phone" placeholder="Phone">
+        </div>
+      </div>
+  </div>  
+  <div ng-hide="!readonly"> 
+    <div class="control-group">
+      Street: {{abcAddress.street}} <br>
+      City: {{abcAddress.city}} <br>
+      State: {{abcAddress.state}} <br>
+      Zip: {{abcAddress.zip}} <br>
+      Phone Number: {{abcAddress.phone}}  
+      <button class="btn btn-danger" ng-show="checkNumber()" ng-click="dialNumber(abcAddress.phone)">Dial</button> 
     </div>
   </div>
-  <div class="control-group">
-    <label class="control-label" for="inputPassword">City</label>
-    <div class="controls">
-      <input type="text" ng-model="abcAddress.city" placeholder="City">
-    </div>
-  </div>
-  <div class="control-group">
-    <label class="control-label" for="inputPassword">State</label>
-    <div class="controls">
-      <input type="text" ng-model="abcAddress.state" placeholder="State">
-    </div>
-  </div>
-  <div class="control-group">
-    <label class="control-label" for="inputPassword">Zip</label>
-    <div class="controls">
-      <input type="text" ng-model="abcAddress.zip" placeholder="Zip">
-    </div>
-  </div>
-  <div class="control-group">
-    <div class="controls">
-      <label class="checkbox">
-        <input type="checkbox"> Remember me
-      </label>
-      <button type="submit" class="btn">Sign in</button>
-    </div>
-  </div>
+
 </form>
